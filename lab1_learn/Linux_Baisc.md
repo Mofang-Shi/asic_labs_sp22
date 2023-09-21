@@ -16,6 +16,7 @@
 ### 在终端（Terminal）键入/使用鼠标
 
 打开一个终端窗口。我们应该看到的第一个东西是一个shell提示，其中包含我们的用户名和机器名称，后跟一个美元符号（$）。如下所示：
+
 ```shell
 shimofang@shimofang-virtual-machine:~$ 
 ```
@@ -27,26 +28,33 @@ shimofang@shimofang-virtual-machine:~$
 
 **超级用户（Superuser）**： 如果shell提示符的最后一个字符是`#`而不是`$`，则正在作为超级用户操作。这意味着拥有管理权限，可以删除或覆盖系统上的任何文件。
 **除非绝对需要管理权限，否则不要作为超级用户操作！**
+
 ## 导航（Navigation）
+
 这个部分将会使用到一下三个命令：`pwd`打印工作目录、`cd`更改目录、`ls`列表文件和目录
 
 ### `pwd`
+
 我们所处的目录称为工作目录（Working directory）。要查看工作目录的名称，我们使用pwd命令：
 
 ```shell
 shimofang@shimofang-virtual-machine:~$ pwd
 /home/shimofang
 ```
+
 当我们第一次登录Linux系统时，工作目录被设置为我们的主目录（home directory）。这就是我们放文件的地方。在大多数系统上，主目录将被称为`/home/user_name`，但根据系统管理员的奇思妙想，它可以是任何东西。
 
 ### `ls`
+
 要列出工作目录中的文件，我们使用ls命令：
+
 ```shell
 shimofang@shimofang-virtual-machine:~$ ls
 公共的  模板  视频  图片  文档  下载  音乐  桌面  snap
 ```
 
 ### `cd`
+
 要更改工作目录，我们使用cd命令：
 `cd + 所需工作目录的路径名`
 路径名可以指定两种不同的方式：`绝对路径名`或`相对路径名`。
@@ -75,17 +83,19 @@ and many more...
 
 **相对路径名**从工作目录开始。为此，它使用几个特殊符号来表示文件系统树中的相对位置。
 `.`——指工作目录本身、`..`——指工作目录的父目录
+
 ```shell
 shimofang@shimofang-virtual-machine:/usr/bin$ cd /usr/bin
 shimofang@shimofang-virtual-machine:/usr/bin$ cd ..
 shimofang@shimofang-virtual-machine:/usr$ cd ./bin
 shimofang@shimofang-virtual-machine:/usr/bin$ 
 ```
+
 **键入cd后不跟任何内容**——cd会将工作目录更改为我们的主目录。
 **键入cd ~user_name**——cd会将工作目录更改为指定用户的主目录。
 **键入cd-**——将工作目录更改为上一个目录。
 
-###关于文件名的重要事实
+### 关于文件名的重要事实
 
 1、以句号字符开头的文件名被隐藏。除非我们用`ls -a`，否则ls不会列出它们。
 
