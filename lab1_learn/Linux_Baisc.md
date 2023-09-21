@@ -85,7 +85,7 @@ and many more...
 `.`——指工作目录本身、`..`——指工作目录的父目录
 
 ```shell
-shimofang@shimofang-virtual-machine:/usr/bin$ cd /usr/bin
+shimofang@shimofang-virtual-machine:~$ cd /usr/bin
 shimofang@shimofang-virtual-machine:/usr/bin$ cd ..
 shimofang@shimofang-virtual-machine:/usr$ cd ./bin
 shimofang@shimofang-virtual-machine:/usr/bin$ 
